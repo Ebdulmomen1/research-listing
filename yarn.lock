@@ -1687,7 +1687,7 @@
     "loose-envify" "^1.1.0"
     "scheduler" "^0.23.0"
 
-"react-i18next@^11.18.0":
+"react-i18next@^11.18.0", "react-i18next@^11.18.3":
   "integrity" "sha512-EttTX31HbqzZymUM3SIrMPuvamfSXFZVsDHm/ZAqoDfTLjhzlwyxqfbDNxcKNAGOi2mjZaXfR7hSNMlvLNpB/g=="
   "resolved" "https://registry.npmjs.org/react-i18next/-/react-i18next-11.18.3.tgz"
   "version" "11.18.3"
