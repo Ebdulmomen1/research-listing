@@ -2,16 +2,16 @@ import "../styles/globals.css";
 // import { AuthProvider } from "../context/AuthContext";
 // import PrivateRoute from "../components/PrivateRoutes";
 import Layout from "../components/Layout";
-import { appWithTranslation } from "next-i18next";
+import { appWithTranslation, withTranslation } from "next-i18next";
 import nextI18nConfig from "../next-i18next.config";
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, t }) {
   // const protectedRoutes = ["/panel"];
   return (
-    <Layout>
+    <Layout t={t}>
       <Component {...pageProps} />
     </Layout>
   );
 }
 
-export default appWithTranslation(MyApp, nextI18nConfig);
+export default appWithTranslation(withTranslation("common")(MyApp));

@@ -5,7 +5,7 @@ import { TbMessage2Share } from "react-icons/tb";
 import { Popover, Transition } from "@headlessui/react";
 import { useTranslation } from "next-i18next";
 
-const Navbar = () => {
+const Navbar = ({ t }) => {
   const router = useRouter();
   console.log(router.locales);
   const language =
@@ -16,7 +16,7 @@ const Navbar = () => {
       : "زمان";
 
   const languageTextMapper = { ku: "کوردی", ar: "عربی", en: "English" };
-  let { t } = useTranslation();
+  // let { t } = useTranslation();
   return (
     <div className="navbar-wrapper bg-white border-b-2 border-govBrown py-4">
       <div className="container mx-auto max-w-5xl flex flex-row justify-between items-center">
