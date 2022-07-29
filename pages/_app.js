@@ -1,17 +1,26 @@
 import "../styles/globals.css";
 // import { AuthProvider } from "../context/AuthContext";
 // import PrivateRoute from "../components/PrivateRoutes";
-import Layout from "../components/Layout";
-import { appWithTranslation, withTranslation } from "next-i18next";
-import nextI18nConfig from "../next-i18next.config";
+// import Layout from "../components/Layout";
+import { appWithTranslation } from "next-i18next";
+// import nextI18nConfig from "../next-i18next.config";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
-function MyApp({ Component, pageProps, t }) {
+function MyApp({ Component, pageProps }) {
   // const protectedRoutes = ["/panel"];
   return (
-    <Layout t={t}>
-      <Component {...pageProps} />
-    </Layout>
+    // <Layout>
+    <div className="min-h-screen flex flex-col">
+      <div className="px-3">
+        <Navbar />
+        <Component {...pageProps} />
+      </div>
+
+      <Footer />
+    </div>
+    // </Layout>
   );
 }
 
-export default appWithTranslation(withTranslation("common")(MyApp));
+export default appWithTranslation(MyApp);
