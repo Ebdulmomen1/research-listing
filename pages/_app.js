@@ -7,9 +7,9 @@ import { appWithTranslation } from "next-i18next";
 function MyApp({ Component, pageProps }) {
   // const protectedRoutes = ["/panel"];
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    // <Layout>
+    <Component {...pageProps} />
+    // </Layout>
   );
 }
 

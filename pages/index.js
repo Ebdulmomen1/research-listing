@@ -25,7 +25,7 @@ export default function Home({ publishers, journals, locale }) {
   );
 }
 
-export async function getStaticProps({ locale }) {
+export async function getServerSideProps({ locale }) {
   try {
     const publisherResponse = await axios.get(
       `${process.env.BACKEND_URL}/publishers`
