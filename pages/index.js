@@ -7,7 +7,8 @@ import { useRouter } from "next/router";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Listing from "../components/Listing";
 
-export default function Home({ publishers, journals }) {
+export default function Home({ publishers, journals, locale }) {
+  console.log(locale);
   return (
     <div>
       <Head>
@@ -38,6 +39,7 @@ export async function getServerSideProps({ locale }) {
       props: {
         publishers,
         journals,
+        locale,
         ...(await serverSideTranslations(locale, ["common", "home"])),
       },
     };

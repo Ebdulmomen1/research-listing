@@ -11,7 +11,7 @@ const Navbar = () => {
   const language =
     router.locale === "en"
       ? "Language"
-      : router.locale === "ara"
+      : router.locale === "ar"
       ? "اللغة"
       : "زمان";
 
